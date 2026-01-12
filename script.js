@@ -234,19 +234,19 @@
     constructor() {
       this.validators = {
         firstName: {
-          pattern: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
+          pattern: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
           message: 'First name must be 2-50 characters and contain only letters, spaces, hyphens, or apostrophes.'
         },
         lastName: {
-          pattern: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
+          pattern: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
           message: 'Last name must be 2-50 characters and contain only letters, spaces, hyphens, or apostrophes.'
         },
         email: {
-          pattern: /^[^s@]+@[^s@]+.[^s@]+$/,
+          pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
           message: 'Please enter a valid email address (e.g., example@domain.com).'
         },
         phone: {
-          pattern: /^[ds+-()]{10,20}$/,
+          pattern: /^[\d\s+\-()]{10,20}$/,
           message: 'Phone number must be 10-20 characters and contain only digits, spaces, +, -, (, ).'
         },
         message: {
